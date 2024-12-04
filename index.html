@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player">
+        <div class="details">
+            <div class="now-playing">
+                PLAYING 
+                <span id="song"></span>
+                 of 
+                <span id="singer"></span>
+            </div>
+            <div class="track-art"></div>
+            <div class="track-name">TRACK NAME</div>
+            <div class="track-artist">TRACK ARTIST</div>
+        <div class="buttons">
+            <div class="prev-track">
+            <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track">
+            <i class="fa fa-pause fa-3x"></i>
+            <i class="fa fa-play-circle fa-3x"></i>
+            </div>
+            <div class="next-track">
+            <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+        <div class="slider_container">
+            <div class="current_time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            <div class="total_duration">00:00</div>
+        </div>
+        <div class="slider_container">
+            <i class="fa-solid fa-volume-low"></i>
+            <input type="range" min="1" max="100" value="100" class="volume_slider" onchange="setVolume()">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+    transition: background-color .5s;
+}
+.player{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+.track-art{
+    margin: 20px;
+    height: 250px;
+    width: 250px;
+    background-image: url("https://s3.amazonaws.com/media.thecrimson.com/photos/2022/10/24/220346_1358794.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.now-playing{
+    font-size: 1rem;    
+    margin-top: 8%;
+    text-transform: uppercase;
+}
+.track-name{
+    font-size: 1.5rem;
+    margin-top: 1px;
+}
+.track-artist{
+    font-size: 1rem;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.playpause-track, .prev-track, .next-track{
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .3s;
+
+}
+.playpause-track:hover, .prev-track:hover, .next-track:hover{
+    opacity: 1.0;
+}
+.slider_container{
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seek_slider, .volume_slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(77, 75, 75, 0.74);
+}
+.seek_slider:hover, .volume_slider:hover{
+    opacity: 1.0;
+}
+.seek_slider{
+    width: 60%;
+}
+.volume_slider{
+    width: 30%;
+}
+.current_time, .total_duration{
+    padding: 10px;
+}
+i.fa-volume-low, i.fa-volume-high{
+    padding: 10px;
+}
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward, i.fa-pause {
+    cursor: pointer;
+}
+
+i.fa-pause {
+    display: none;
+}
